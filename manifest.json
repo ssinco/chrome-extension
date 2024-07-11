@@ -6,9 +6,13 @@
     "permissions": [
         "storage",
         "alarms",
-        "notifications"
+        "notifications",
+        "background"
     ],
     "author": "Stephen Sinco",
+    "background": {
+    "service_worker": "background.js"
+    },
     "action": {
         "default_popup": "index.html",
         "default_title": "Test chrome extension title"

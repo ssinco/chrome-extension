@@ -19,12 +19,12 @@ function startTimer(task, time) {
       chrome.alarms.clear('timerAlarm');
       chrome.notifications.create({
         type: 'basic',
-        iconUrl: 'icon.png',
+        iconUrl: 'icon.png', // Ensure you have an icon.png in your extension directory
         title: 'Timer Ended',
-        task: task
+        message: `Your task "${task}" has ended!`
       });
     } else {
-      chrome.runtime.sendMessage({ action: 'updateTimer', remainingTime });
+      chrome.runtime.sendMessage({ action: 'updateTimer', task, remainingTime });
     }
   }, 1000);
 }
@@ -33,7 +33,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === 'timerAlarm') {
     chrome.notifications.create({
       type: 'basic',
-      iconUrl: 'icon.png',
+      iconUrl: 'icon.png', // Ensure you have an icon.png in your extension directory
       title: 'Timer Ended',
       message: 'Your timer has ended!'
     });
