@@ -1,21 +1,20 @@
 {
-    "name": "Test chrome extension",
-    "version": "1.0.0",
-    "description": "test extension for hackathon",
     "manifest_version": 3,
+    "name": "Timer Extension",
+    "version": "1.0",
     "permissions": [
-        "storage",
-        "alarms",
-        "notifications",
-        "background"
+      "storage",
+      "alarms",
+      "notifications"
     ],
-    "author": "Stephen Sinco",
     "background": {
-    "service_worker": "background.js"
+      "service_worker": "background.js"
     },
     "action": {
-        "default_popup": "index.html",
-        "default_title": "Test chrome extension title"
+      "default_popup": "popup.html",
+      "default_icon": "assets/icons8-alarm-clock-96.png"
+    },
+    "icons": {
+        "48": "assets/icons8-alarm-clock-96.png"
     }
-}
-
+  }
