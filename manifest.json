@@ -3,9 +3,15 @@
     "version": "1.0.0",
     "description": "test extension for hackathon",
     "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "alarms",
+        "notifications"
+    ],
     "author": "Stephen Sinco",
     "action": {
         "default_popup": "index.html",
         "default_title": "Test chrome extension title"
     }
 }
+

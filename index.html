@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Hello, Chrome Extension!</h1>
-    <button id="myButton">Click me</button>
-    <script src="popup.js"></script>
-
-    <form>
-        <input>
-        <input>
-        <input>
-    </form>
     
+    <div class = "main-container">
+        <form class = "set-timer-form">
+            <div class="fields">
+                <input name="task" placeholder="Task description" type="text" required>
+                <input name="time" placeholder="Time(HH:SS)" type="number" required>
+            </div>
+            <button id="set-timer-button" type="submit">Set Reminder</button>
+        </form>
+    </div>
+    <div class = "task-container">
+        <div class = "task-description">
+            <p id="task-display"></p>
+        </div>
+        <div class = "timer-container">
+            <p id="timer-display"></p>
+        </div>
+    </div>
 </body>
 
 
